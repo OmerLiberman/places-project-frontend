@@ -9,6 +9,7 @@ import {
 import Users from './user/pages/Users';
 import MainNavigation
   from './shared/components/Navigation/MainNavigation/MainNavigation';
+import UserPlaces from './places/pages/UserPlaces';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ class App extends Component {
           <main>
             <Switch>
               <Route path="/" exact> <Users/> </Route>
-              <Route path="/" exact> Some link </Route>
+              <Route path="/:uid/places" exact> <UserPlaces/> </Route>
               <Route path="/" exact> Some link </Route>
               <Route path="/" exact> Some link </Route>
               <Redirect to="/"/>
