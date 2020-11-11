@@ -6,7 +6,6 @@ import './Modal.css';
 import Backdrop from '../Backdrop/Backdrop';
 
 const ModalOverlay = props => {
-  console.log(props);
   const content = (
       <div className={`modal ${props.className}`} style={props.style}>
         <header className={`modal__header ${props.headerClass}`}>

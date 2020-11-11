@@ -4,6 +4,7 @@ import './PlaceItem.css';
 import Card from '../../../shared/components/UIElements/Card/Card';
 import Button from '../../../shared/components/FormElements/Button/Button';
 import Modal from '../../../shared/components/UIElements/Modal/Modal';
+import Map from '../../../shared/components/UIElements/Map/Map';
 
 const PlaceItem = props => {
   const [showMap, setShowMap] = useState(false);
@@ -14,11 +15,13 @@ const PlaceItem = props => {
 
   return (
       <React.Fragment>
-        <Modal show={showMap} onCancel={closeMapHandler} headerClass={props.address}
-               contentClass="place-item__modal-content" footerClass="place-item__modal-actions"
+        <Modal show={showMap} onCancel={closeMapHandler}
+               headerClass={props.address}
+               contentClass="place-item__modal-content"
+               footerClass="place-item__modal-actions"
                footer={<Button onClick={closeMapHandler}> close </Button>}>
           <div className="map-container">
-            <h2> map here ! </h2>
+            <Map/>
           </div>
         </Modal>
         <li className="place-item">
